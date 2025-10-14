@@ -2,25 +2,48 @@
 
 title: 地平线
 author: 王维
+description: "欢迎来到我的个人网站"
 lang: zh-CN
 timezone: Asia/Shanghai
 
-# 使用 remote_theme 代替本地 theme
-remote_theme: mmistakes/beautiful-jekyll@master
+# 使用正确的 Beautiful Jekyll 远程主题
+remote_theme: daattali/beautiful-jekyll
+
+# 插件配置
 plugins:
   - jekyll-remote-theme
 
-# 导航栏配置
+# 网站URL
+url: "https://你的用户名.github.io"  # 请修改这里
+baseurl: ""  # 如果网站不在根目录，填写子路径
+
+# 社交链接
+social:
+  name: 王维
+  email: "your-email@example.com"  # 请修改这里
+  links:
+    - "https://github.com/yourusername"  # 请修改这里
+
+# 修正后的导航栏配置 - 指向 tabs 目录下的页面
 nav:
   - title: "首页"
     url: /
   - title: "博客"
-    url: /blog/
+    url: /tabs/blog/
   - title: "消费"
-    url: /media/
+    url: /tabs/media/
   - title: "照片"
-    url: /photo/
+    url: /tabs/photo/
   - title: "驻足"
-    url: /stop/
+    url: /tabs/stop/
   - title: "关于我"
-    url: /about/
+    url: /tabs/about/
+
+# 页面配置
+show_downloads: false
+google_analytics: ""
+disqus_shortname: ""
+
+# 构建设置
+markdown: kramdown
+permalink: pretty
