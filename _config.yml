@@ -2,9 +2,13 @@
 
 title: 地平线
 author: 王维
-theme: beautiful-jekyll
 lang: zh-CN
 timezone: Asia/Shanghai
+
+# 使用 remote_theme 代替本地 theme
+remote_theme: mmistakes/beautiful-jekyll@master
+plugins:
+  - jekyll-remote-theme
 
 # 导航栏配置
 nav:
@@ -18,5 +22,5 @@ nav:
     url: /photo/
   - title: "驻足"
     url: /stop/
-  - title: "关于"
+  - title: "关于我"
     url: /about/
