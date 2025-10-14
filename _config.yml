@@ -1,34 +1,22 @@
-# ---------------------------
-# 基本信息
-# ---------------------------
-title: "地平线"
-description: "纪委的个人博客 · 学习 感悟 探索"
-author: "someone"
-url: "https://seamoonappear.github.io/blog"
+# _config.yml
 
-# ---------------------------
-# 使用 Beautiful Jekyll 主题
-# ---------------------------
-remote_theme: daattali/beautiful-jekyll
+title: 地平线
+author: 王维
+theme: beautiful-jekyll
+lang: zh-CN
+timezone: Asia/Shanghai
 
-plugins:
-  - jekyll-remote-theme
-
-# ---------------------------
-# 页面与社交信息
-# ---------------------------
-navbar-links:
-  首页: "index.md"
-  博客: "posts"
-  关于我: "about.md"
-
-social-network-links:
-  github: seamoonappear
-  rss: true
-
-# ---------------------------
-# 外观设置
-# ---------------------------
-avatar: "/assets/img/avatar.jpg"  # 头像路径
-favicon: "/assets/img/favicon.png"
-footer: "© 2025 王维 | Powered by Beautiful Jekyll"
+# 导航栏配置
+nav:
+  - title: "首页"
+    url: /
+  - title: "博客"
+    url: /blog/
+  - title: "消费"
+    url: /media/
+  - title: "照片"
+    url: /photo/
+  - title: "驻足"
+    url: /stop/
+  - title: "关于"
+    url: /about/
