@@ -6,44 +6,53 @@ description: "欢迎来到我的个人网站"
 lang: zh-CN
 timezone: Asia/Shanghai
 
-# 使用 Beautiful Jekyll 主题
 remote_theme: daattali/beautiful-jekyll
 
-# 插件配置
 plugins:
   - jekyll-remote-theme
 
-# 网站 URL 设置（仓库名是 blog）
 url: "https://seamoonappear.github.io"
-baseurl: "/blog"  # ✅ 保留这一行
+baseurl: "/blog"  # 仓库名是 blog
 
-# 社交链接
 social:
   name: 王维
   email: "your-email@example.com"
   links:
     - "https://github.com/seamoonappear"
 
-# ✅ 修正后的导航栏路径（不要重复写 /blog）
+# ✅ 含下拉子菜单的导航栏配置
 nav:
   - title: "首页"
     url: /
   - title: "博客"
-    url: /tabs/blog/
+    sublinks:
+      - title: "全部文章"
+        url: /tabs/blog/
+      - title: "技术"
+        url: /tabs/tech/
+      - title: "生活"
+        url: /tabs/life/
   - title: "消费"
-    url: /tabs/media/
+    sublinks:
+      - title: "书影音"
+        url: /tabs/media/
+      - title: "兴趣"
+        url: /tabs/hobby/
   - title: "照片"
-    url: /tabs/photo/
-  - title: "驻足"
-    url: /tabs/stop/
+    sublinks:
+      - title: "风景"
+        url: /tabs/photo/
+      - title: "旅行"
+        url: /tabs/stop/
   - title: "关于我"
     url: /tabs/about/
 
 # 页面配置
 show_downloads: false
+
+# ✅ 已去除谷歌统计与评论功能
 google_analytics: ""
 disqus_shortname: ""
 
-# 构建设置
 markdown: kramdown
 permalink: pretty
