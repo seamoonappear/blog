@@ -1,58 +1,75 @@
-# _config.yml
-
+# 基本信息
 title: 地平线
 author: 王维
 description: "欢迎来到我的个人网站"
 lang: zh-CN
 timezone: Asia/Shanghai
 
+# 正确的 Beautiful Jekyll 主题设置
 remote_theme: daattali/beautiful-jekyll
 
+# 插件（GitHub Pages 支持）
 plugins:
   - jekyll-remote-theme
+  - jekyll-feed
+  - jekyll-seo-tag
 
+# 网站地址设置（请确认仓库名）
+# 如果仓库名是 seamoonappear.github.io，则保持为空
 url: "https://seamoonappear.github.io"
-baseurl: "/blog"  # 仓库名是 blog
+baseurl: "/blog" # 若是 blog 子库则填 "/blog"
 
-social:
-  name: 王维
-  email: "your-email@example.com"
+# 导航栏
+navbar:
+  title: "地平线"
+  logo:
+    image: /assets/img/avatar.jpg
+    alt: 王维
+    link: /about/
   links:
-    - "https://github.com/seamoonappear"
+    - title: "博客"
+      url: /blog/
+    - title: "媒体"
+      url: /media/
+      children:
+        - title: "书籍"
+          url: /media/books/
+        - title: "音乐"
+          url: /media/music/
+        - title: "电影"
+          url: /media/movies/
+        - title: "停留"
+          url: /media/stops/
+        - title: "爱好"
+          url: /media/hobby/
+    - title: "关于我"
+      url: /about/
 
-# ✅ 含下拉子菜单的导航栏配置
-nav:
-  - title: "首页"
-    url: /
-  - title: "博客"
-    sublinks:
-      - title: "全部文章"
-        url: /tabs/blog/
-      - title: "技术"
-        url: /tabs/tech/
-      - title: "生活"
-        url: /tabs/life/
-  - title: "消费"
-    sublinks:
-      - title: "书影音"
-        url: /tabs/media/
-      - title: "兴趣"
-        url: /tabs/hobby/
-  - title: "照片"
-    sublinks:
-      - title: "风景"
-        url: /tabs/photo/
-      - title: "旅行"
-        url: /tabs/stop/
-  - title: "关于我"
-    url: /tabs/about/
+# 首页设置（混合布局）
+show_excerpts: true
+paginate: 6
+paginate_path: "/page:num/"
+excerpt_separator: "<!--more-->"
+layout: home
 
-# 页面配置
-show_downloads: false
+# 社交链接（可选）
+social-network-links:
+  github: seamoonappear
 
-# ✅ 已去除谷歌统计与评论功能
-google_analytics: ""
-disqus_shortname: ""
+# 不使用谷歌分析
+google_analytics: false
 
+# 文件和构建排除
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - tmp
+
+# Markdown 设置
 markdown: kramdown
-permalink: pretty
+kramdown:
+  input: GFM
+  hard_wrap: false
