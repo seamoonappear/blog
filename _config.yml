@@ -1,65 +1,64 @@
-# 基本信息
+# 基本站点信息
 title: 地平线
 author: 王维
 description: "欢迎来到我的个人网站"
 lang: zh-CN
 timezone: Asia/Shanghai
 
-# 正确的 Beautiful Jekyll 主题设置
+# 使用 Beautiful Jekyll 官方远程主题
 remote_theme: daattali/beautiful-jekyll
 
-# 插件（GitHub Pages 支持）
+# 启用的插件
 plugins:
   - jekyll-remote-theme
   - jekyll-feed
   - jekyll-seo-tag
 
-# 网站地址设置（请确认仓库名）
-# 如果仓库名是 seamoonappear.github.io，则保持为空
+# 部署路径设置
 url: "https://seamoonappear.github.io"
-baseurl: "/blog" # 若是 blog 子库则填 "/blog"
+baseurl: "/blog"  # 若是主库 seamoonappear.github.io 就改成 ""
 
-# 导航栏
+# 网站导航栏
 navbar:
   title: "地平线"
   logo:
     image: /assets/img/avatar.jpg
     alt: 王维
-    link: /about/
+    link: /tabs/about/
   links:
     - title: "博客"
-      url: /blog/
+      url: /tabs/blog/
     - title: "媒体"
-      url: /media/
+      url: /tabs/media/
       children:
         - title: "书籍"
-          url: /media/books/
+          url: /tabs/media/books/
         - title: "音乐"
-          url: /media/music/
+          url: /tabs/media/music/
         - title: "电影"
-          url: /media/movies/
+          url: /tabs/media/movies/
         - title: "停留"
-          url: /media/stops/
+          url: /tabs/stop/
         - title: "爱好"
-          url: /media/hobby/
+          url: /tabs/media/hobby/
     - title: "关于我"
-      url: /about/
+      url: /tabs/about/
 
-# 首页设置（混合布局）
+# 首页布局设置（混合布局：封面 + 博客列表）
 show_excerpts: true
 paginate: 6
 paginate_path: "/page:num/"
 excerpt_separator: "<!--more-->"
 layout: home
 
-# 社交链接（可选）
+# 社交链接
 social-network-links:
   github: seamoonappear
 
-# 不使用谷歌分析
+# 禁用谷歌分析
 google_analytics: false
 
-# 文件和构建排除
+# 构建排除项
 exclude:
   - README.md
   - Gemfile
